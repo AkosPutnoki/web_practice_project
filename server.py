@@ -24,7 +24,7 @@ def mentors():
 def mentor_page(mentor_id):
     menu_titles = common.menu_zip(MENU_LIST)
     headers = ["full_name", "phone_number", "email", "city", "favourite_number"]
-    final_headers = common.header_format()
+    final_headers = common.header_format(headers)
     mentor_info = queries.mentor_info(mentor_id)
     return render_template("mentorpage.html", final_headers=final_headers, menu_titles=menu_titles, mentor_info=mentor_info)
 
