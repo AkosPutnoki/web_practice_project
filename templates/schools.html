@@ -1,0 +1,9 @@
+{% extends "home.html" %}
+{% block title %} - Schools {% endblock %}
+{% block content %}
+    {% for school in info_table %}
+        <h2> {{ school['name'] }} - {{school['city']}} - {{school['country']}} </h2><br>
+        <img src="{{school['image']}}" width="970" height="300"><br>
+        <p> {{school['description']}} </p>
+    {% endfor %}
+{% endblock %}

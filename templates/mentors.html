@@ -1,0 +1,7 @@
+{% extends "home.html" %}
+{% block title %} - Mentors {% endblock %}
+{% block content %}
+    {% for mentor in mentor_names %}
+        <a href="mentors/{{mentor['id']}}"> {{mentor['full_name']}} </a><br>
+    {% endfor %}
+{% endblock %}

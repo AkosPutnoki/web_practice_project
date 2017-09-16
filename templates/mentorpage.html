@@ -1,0 +1,10 @@
+{% extends "home.html" %}
+{% block title %} - {{mentor_info[0]['full_name']}} {% endblock %}
+{% block content %}
+    {% for title, header in final_headers %}
+    <div class="infotab">    
+        <h2> {{header}} </h2>
+        <p> {{mentor_info[0][title]}} </p>
+    </div>
+    {% endfor %}
+{% endblock %}

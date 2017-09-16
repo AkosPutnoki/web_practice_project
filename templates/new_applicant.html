@@ -1,0 +1,11 @@
+{% extends "home.html" %}
+{% block title %} - Add new applicant {% endblock %}
+{% block content %}
+    <form action="/save-applicant" method="POST">
+        {% for title, header in final_headers %}
+            <label for="{{title}}"> {{header}} </label><br>
+            <input type="text" name="{{title}}"><br>
+        {% endfor %}
+        <input type="submit" value="Add applicant">
+    </form>
+{% endblock %}

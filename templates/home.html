@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Codecool </title>
+    </head>
+    <body>
+        <h1><a href="/"> Codecool </a> {% block title %}{% endblock %}</h1>
+        {% for menu, title in menu_titles %}
+            <form action="/{{menu}}" method="post">
+                <input type="submit" value="{{title}}">
+            </form>
+        {% endfor %} 
+        {% block content %}
+            <h2> News </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate lacus nunc, 
+                eget bibendum neque lacinia vitae. Donec id tristique massa. Suspendisse potenti. 
+                Morbi eget mauris in dolor rutrum scelerisque nec malesuada justo. 
+                Nullam urna urna, iaculis non consectetur placerat, placerat in odio. 
+                Pellentesque iaculis non risus non auctor. Integer ullamcorper, velit nec tempor 
+                vestibulum, mi purus feugiat mauris, nec ultricies tellus massa ultricies velit.</p>
+            <p>Quisque tincidunt eros quis lectus pellentesque, non mollis massa malesuada. 
+                Morbi porta, tortor eget aliquet volutpat, enim massa auctor sapien, sed aliquam 
+                tortor turpis sit amet ex. Vestibulum dictum porta nulla. Integer sem metus, 
+                ornare dignissim leo vitae, tempor egestas felis. Proin malesuada purus odio, 
+                id porta eros consequat in. Nunc pellentesque ac mauris a euismod. 
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
+                per inceptos himenaeos. Etiam sit amet aliquet eros, vitae ornare ex. 
+                Cras molestie malesuada nulla ut sodales.</p>
+            <p>Phasellus vehicula leo lacinia nunc mattis, nec condimentum nunc aliquet. 
+                Mauris eu lorem ut odio tristique consequat. Aliquam pulvinar ultrices imperdiet. 
+                Nullam scelerisque, felis ut vehicula rhoncus, tellus orci maximus nunc, pulvinar 
+                interdum ligula erat vitae felis. Quisque dapibus porttitor justo maximus pulvinar. 
+                Integer rhoncus iaculis sem, nec eleifend lectus molestie non. Nullam commodo enim 
+                varius sem tempor iaculis sed vel enim. Mauris et posuere diam. Aenean vitae nulla mi. 
+                Vestibulum vel felis at nisi vulputate fringilla in vitae ante. Donec nec felis arcu. 
+                Vivamus aliquet erat in lectus mattis, convallis viverra lectus gravida. 
+                Integer eu aliquam ligula, nec tincidunt metus.</p>
+        {% endblock %}
+    </body>
+    <footer>
+        <a href="/"> Back to Home </a>
+        <a href="/contacts"> Contacts </a>
+    </footer>
+</html>

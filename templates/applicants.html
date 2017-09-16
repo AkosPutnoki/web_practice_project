@@ -1,0 +1,19 @@
+{% extends "home.html" %}
+{% block title %} - Applicants {% endblock %}
+{% block content %}
+    <table border="1">
+        {% for header in formatted_headers %}
+            <th> {{ header }} </th>
+        {% endfor %}
+        {% for record in table %}
+            <tr>
+                {% for key in headers %}
+                    <td> {{ record[key] }} </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <form action="/new-applicant" method="post">
+        <input type="submit" value="Add new applicant">
+    </form>
+{% endblock %}
